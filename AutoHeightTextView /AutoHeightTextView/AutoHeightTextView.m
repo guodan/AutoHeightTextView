@@ -23,7 +23,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         //添加内容变化的监听
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(heightWithContent:) name:UITextViewTextDidChangeNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeFrame) name:UITextViewTextDidChangeNotification object:nil];
         [self setStyleWithFrame:frame];
     }
     return self;
@@ -38,8 +38,18 @@
     self.layer.cornerRadius = (frame.size.width < frame.size.height ? frame.size.width : frame.size.height) * 0.2;
 }
 
+- (void)setBorderColor:(CGColorRef)borderColor {
+    self.layer.borderColor = borderColor;
+}
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    self.layer.borderWidth = borderWidth;
+}
+- (void)setCornerWidth:(CGFloat)cornerWidth {
+    self.layer.cornerRadius = cornerWidth;
+}
+
 #pragma mark 通过内容计算高度,重新设置frame
-- (void)heightWithContent:(NSString *)content {
+- (void)changeFrame {
     
     CGFloat maxH = self.maxHeight;
     CGRect frame = self.frame;

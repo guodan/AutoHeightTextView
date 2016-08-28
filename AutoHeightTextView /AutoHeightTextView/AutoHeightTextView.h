@@ -18,6 +18,10 @@
  */
 @property (nonatomic, assign) CGFloat borderWidth;
 /**
+ *	圆角半径
+ */
+@property (nonatomic, assign) CGFloat cornerWidth;
+/**
  *	边框颜色(需要转换为CGColor)
  */
 @property (nonatomic) CGColorRef borderColor;
