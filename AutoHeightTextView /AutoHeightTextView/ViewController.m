@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     AutoHeightTextView *autoHTV = [[AutoHeightTextView alloc] initWithFrame:CGRectMake(40, 80, self.view.frame.size.width - 80, 40)];
-    autoHTV.maxHeight = 20;
+    autoHTV.maxHeight = 80;
 //    autoHTV.borderWidth = 10;
     [self.view addSubview:autoHTV];
 }
