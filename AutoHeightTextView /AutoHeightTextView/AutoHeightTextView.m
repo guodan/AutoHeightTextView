@@ -66,7 +66,6 @@
         }
     }
     self.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, size.height);
-    [self layoutSubviews];
 }
 
 - (void)dealloc {
