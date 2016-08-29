@@ -22,8 +22,8 @@
  */
 @property (nonatomic, assign) CGFloat cornerWidth;
 /**
- *	边框颜色(需要转换为CGColor)
+ *	边框颜色
  */
-@property (nonatomic) CGColorRef borderColor;
+@property (nonatomic, strong) UIColor *borderColor;
 
 @end

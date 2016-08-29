@@ -38,8 +38,8 @@
     self.layer.cornerRadius = (frame.size.width < frame.size.height ? frame.size.width : frame.size.height) * 0.2;
 }
 
-- (void)setBorderColor:(CGColorRef)borderColor {
-    self.layer.borderColor = borderColor;
+- (void)setBorderColor:(UIColor *)borderColor {
+    self.layer.borderColor = borderColor.CGColor;
 }
 - (void)setBorderWidth:(CGFloat)borderWidth {
     self.layer.borderWidth = borderWidth;
